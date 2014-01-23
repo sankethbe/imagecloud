@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Image Magick in the Cloud</title>
+
+<script type="text/javascript">
+    function showHide() {
+            document.getElementById("hidden_div").style.display = "block";
+    }
+</script>
+
+<style>
+div#container {
+	width: 80%;
+	margin:0 auto;
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+<div id="container">
+<img src="images/main.jpg" width="300" height="217" alt="ImageMagick">
+<h1 align="center">Image Magick in the Cloud</h1>
+
+<form action="upload.php" method="post" enctype="multipart/form-data" onSubmit="return showPleaseWait()">
+<input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+<p><label for="myfile">Choose image to upload:</label></p>
+<p>
+  <input name="userfile" id="myfile" type="file" />
+</p>
+
+<p><label for="name">Your Name:</label>
+<input type='text' name='name' id='name'/>
+</p>
+
+<p><label for="email">Your Email:</label>
+<input type='text' name='email' id='email'/>
+</p>
+
+<h2>Choose image filter to apply:</h2>
+
+<label for='crop'><input type='radio' name='filter' id='filter1' value='TiltShift'/>TiltShift</label>
+
+<label for='crop'><input type='radio' name='filter' id='filter2' value='Gotham'/>Black n White</label>
+
+<label for='crop'><input type='radio' name='filter' id='filter3' value='Toaster'/>Old Movie</label>
+
+<label for='crop'><input type='radio' name='filter' id='filter4' value='Nashville'/>Photo Reel</label>
+
+<label for='crop'><input type='radio' name='filter' id='filter5' value='Kelvin'/>Picture Frame</label>
+
+<p><input type="submit" value="Upload File" onClick="showHide()"/></p>
+
+</form>
+<div class="echo" id="hidden_div" style="display:none">
+Please wait!</br><img src="./images/uploading.gif"/>
+</div>
+
+</div>
+</body>
+</html>
