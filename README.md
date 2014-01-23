@@ -1,4 +1,4 @@
 imagecloud
 ==========
 
-Scalable image processing service
+Cloud based scalable image processing service.
